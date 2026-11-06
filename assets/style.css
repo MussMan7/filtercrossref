@@ -1,0 +1,68 @@
+/* FilterCrossRef — reference-tool stylesheet. No external fonts, no images. */
+:root{
+  --ink:#1b2430; --muted:#5b6675; --line:#d9dee5; --bg:#f7f8fa; --card:#fff;
+  --accent:#0b6e4f; --accent-ink:#fff; --warn-bg:#fff7e0; --warn-line:#e6c25a;
+  --note-bg:#eef5f2; --code:#eef1f5; --max:46rem;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent)} a:hover{text-decoration-thickness:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1rem}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;padding:.75rem 1rem}
+.brand{font-weight:800;letter-spacing:-.01em;text-decoration:none;color:var(--ink);font-size:1.1rem}
+.brand span{color:var(--accent)}
+nav.top a{margin-left:1rem;font-size:.95rem;text-decoration:none}
+nav.top a:first-child{margin-left:0}
+main{padding:1.5rem 0 2.5rem}
+h1{font-size:1.75rem;line-height:1.2;margin:.25rem 0 .5rem;letter-spacing:-.015em}
+h2{font-size:1.3rem;margin:2rem 0 .5rem;padding-top:.5rem;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:1.25rem 0 .35rem}
+.lede{font-size:1.08rem;color:var(--muted);margin-top:0}
+.crumbs{font-size:.85rem;color:var(--muted);margin:0 0 .5rem}
+.crumbs a{color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.1rem;margin:1rem 0}
+.callout{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;padding:.85rem 1rem;margin:1rem 0}
+.note{background:var(--note-bg);border-left:4px solid var(--accent);padding:.75rem 1rem;margin:1rem 0;border-radius:0 6px 6px 0}
+.tldr{background:var(--card);border:2px solid var(--accent);border-radius:8px;padding:.9rem 1.1rem;margin:1rem 0}
+.tldr strong:first-child{display:block;margin-bottom:.25rem;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;color:var(--accent)}
+code,.mono{font-family:var(--mono);font-size:.92em;background:var(--code);padding:.05em .35em;border-radius:4px}
+.table-scroll{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f0f3f6;font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);white-space:nowrap}
+caption{caption-side:bottom;text-align:left;font-size:.8rem;color:var(--muted);padding:.5rem .7rem}
+ol.check,ul.check{padding-left:0;list-style:none;counter-reset:c}
+ol.check li,ul.check li{position:relative;padding:.45rem 0 .45rem 2.2rem;border-bottom:1px dashed var(--line)}
+ol.check li::before{counter-increment:c;content:counter(c);position:absolute;left:0;top:.45rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:.85rem;display:grid;place-items:center}
+ul.check li::before{content:"☐";position:absolute;left:.2rem;top:.4rem;font-size:1.1rem;color:var(--accent)}
+.grid{display:grid;gap:.75rem;grid-template-columns:1fr}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
+.tile{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.85rem 1rem;text-decoration:none;color:var(--ink)}
+a.tile:hover{border-color:var(--accent)}
+.tile b{display:block;font-family:var(--mono);font-size:1.05rem;color:var(--accent)}
+.tile small{color:var(--muted)}
+.tile.planned{background:transparent;border-style:dashed;color:var(--muted)}
+.tile.planned b{color:var(--muted)}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:.1rem .45rem;border-radius:4px;background:#e4e8ed;color:var(--muted);vertical-align:middle}
+.badge.live{background:var(--note-bg);color:var(--accent)}
+form.finder{display:grid;gap:.6rem;grid-template-columns:repeat(3,1fr);align-items:end}
+form.finder label{font-size:.8rem;font-weight:600;color:var(--muted);display:block}
+form.finder input{width:100%;font:inherit;font-family:var(--mono);padding:.55rem .6rem;border:1px solid var(--line);border-radius:6px;background:#fff}
+form.finder input:focus{outline:2px solid var(--accent);outline-offset:1px}
+form.finder button{grid-column:1/-1;font:inherit;font-weight:700;padding:.65rem;border:0;border-radius:6px;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.finder-mode{display:flex;gap:1rem;font-size:.9rem;margin:.25rem 0 .75rem;flex-wrap:wrap}
+#finder-out{margin-top:.75rem}
+#finder-out:empty{display:none}
+.toc{font-size:.95rem}
+.toc ol{margin:.25rem 0 0;padding-left:1.25rem}
+footer.site{border-top:1px solid var(--line);background:var(--card);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding:1.25rem 1rem 2rem}
+footer.site p{margin:.4rem 0}
+footer.site .measure{font-weight:700;color:var(--ink)}
+@media print{header.site nav,footer.site,form.finder{display:none}body{background:#fff}}

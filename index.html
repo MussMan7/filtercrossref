@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FilterCrossRef — Furnace &amp; HVAC filter size and OEM cross-reference</title>
+<meta name="description" content="Match the size on your furnace filter to what actually fits your slot. Nominal vs actual sizes, brand-to-brand differences, OEM part cross-references, and a measure-before-you-buy checklist.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">Filter<span>CrossRef</span></a>
+  <nav class="top"><a href="guides/nominal-vs-actual/index.html">Nominal vs actual</a><a href="sizes/20x25x1/index.html">20x25x1</a><a href="#disclosure">Disclosure</a></nav>
+</div></header>
+
+<main><div class="wrap">
+  <h1>Find the furnace filter that actually fits your slot</h1>
+  <p class="lede">FilterCrossRef is a plain reference for residential HVAC and furnace air filters: what the size on the label means, what the filter really measures, which brands run big or small, and which OEM part numbers are interchangeable. No sign-up, no pop-ups.</p>
+
+  <div class="tldr"><strong>Before anything else</strong>The big number on the cardboard (for example <code>16x25x1</code>) is a <em>nominal</em> name, not a measurement. Most 1″ filters are cut smaller on purpose, and thick 4–5″ media filters labeled with the same size can be completely different shapes from brand to brand. <a href="guides/nominal-vs-actual/index.html">Read the 5-minute guide →</a></div>
+
+  <h2 id="finder-h">Size finder</h2>
+  <div class="card">
+    <form id="finder" class="finder" autocomplete="off">
+      <div class="finder-mode" style="grid-column:1/-1" role="radiogroup" aria-label="What did you measure?">
+        <label style="font-size:.9rem;color:inherit;font-weight:400"><input type="radio" name="mode" value="label" checked style="width:auto"> I’m reading the size printed on the old filter</label>
+        <label style="font-size:.9rem;color:inherit;font-weight:400"><input type="radio" name="mode" value="tape" style="width:auto"> I measured it with a tape</label>
+      </div>
+      <div><label for="w">Width (in)</label><input id="w" name="w" inputmode="decimal" placeholder="16"></div>
+      <div><label for="l">Length (in)</label><input id="l" name="l" inputmode="decimal" placeholder="25"></div>
+      <div><label for="d">Depth (in)</label><input id="d" name="d" inputmode="decimal" placeholder="1"></div>
+      <button type="submit">Find my size</button>
+    </form>
+    <div id="finder-out" aria-live="polite"></div>
+    <p class="meta" style="margin-bottom:0">Don’t have the old filter? Measure the <strong>slot</strong> (the opening the filter slides into) — width, length and depth — and see <a href="guides/nominal-vs-actual/index.html#measure">how to measure</a>. The finder runs entirely in your browser.</p>
+  </div>
+
+  <h2>Published pages</h2>
+  <div class="grid two">
+    <a class="tile" href="guides/nominal-vs-actual/index.html"><span class="badge live">Guide</span><b>Nominal vs actual size</b><small>Why the label isn’t the slot size, how to measure, and where brands disagree.</small></a>
+    <a class="tile" href="sizes/16x25x1/index.html"><span class="badge live">Size</span><b>16x25x1</b><small>Actual dimensions by brand, MERV choice, where this size is typically installed.</small></a>
+    <a class="tile" href="sizes/20x25x1/index.html"><span class="badge live">Size</span><b>20x25x1</b><small>Actual dimensions by brand, MERV choice, where this size is typically installed.</small></a>
+    <a class="tile" href="oem/honeywell/fc100a1029/index.html"><span class="badge live">OEM</span><b>Honeywell FC100A1029</b><small>16×25 F100/F200 media filter: actual size, cabinets, replacements.</small></a>
+  </div>
+
+  <h2>Coming next</h2>
+  <p class="meta">We publish one page at a time and only when it has real, checked dimensions. These are in the queue, roughly in order:</p>
+  <div class="grid two">
+    <div class="tile planned"><span class="badge">Planned</span><b>Aprilaire 213</b><small>OEM media filter cross-reference</small></div>
+    <div class="tile planned"><span class="badge">Planned</span><b>16x25x5 actual-size table</b><small>Same label, different shapes — by brand</small></div>
+    <div class="tile planned"><span class="badge">Planned</span><b>MERV 8 vs 11 vs 13</b><small>What changes, and when to stop going higher</small></div>
+    <div class="tile planned"><span class="badge">Planned</span><b>Odd &amp; custom sizes</b><small>What to do when no store stocks yours</small></div>
+  </div>
+
+  <h2>How this site works</h2>
+  <ul>
+    <li><strong>Dimensions come from published sources</strong> — manufacturer listings, spec sheets, or documented community measurements — and each table says where its numbers came from.</li>
+    <li><strong>We don’t guess.</strong> If we couldn’t confirm an actual size, the cell says so instead of filling in a plausible number.</li>
+    <li><strong>No health promises.</strong> We describe MERV ratings the way the test standard does (particle capture), not as medical advice.</li>
+  </ul>
+
+  <h2 id="disclosure">Affiliate disclosure</h2>
+  <p>FilterCrossRef may earn a commission when you buy through links on this site once affiliate or referral programs are active. That never changes which size we tell you fits — a wrong-size sale is a return, and a return helps nobody. As of today, no affiliate links are live on this site.</p>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  <p class="measure">Measure before you buy. Labels are names, not measurements.</p>
+  <p>Disclosure: we may earn commissions from qualifying purchases when affiliate programs are live. No paid placements.</p>
+  <p>Contact: <span class="mono">[contact address coming soon]</span> · Corrections welcome — tell us the brand, the label, and what your tape measured.</p>
+  <p>© 2026 FilterCrossRef. Reference information only; check your equipment manual or an HVAC technician when in doubt.</p>
+</div></footer>
+<script src="assets/finder.js" defer></script>
+</body>
+</html>
